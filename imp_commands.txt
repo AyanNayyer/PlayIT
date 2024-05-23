@@ -1,0 +1,18 @@
+## starting Redis Server
+sudo redis-server start
+redis-server
+
+# ## stopping redis -server
+# sudo service redis-server stop
+
+# ## check if redis-server active
+# redis-cli ping 
+# (respone should be PONG)
+
+
+## start celery worker
+celery -A app.celery_app worker --loglevel=INFO
+
+## start celery beat
+celery -A app.celery_app beat --loglevel=INFO
+
